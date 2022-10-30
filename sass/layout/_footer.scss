@@ -1,0 +1,105 @@
+.attribution {
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.footer {
+  width: 100%;
+  margin:10rem auto 0 auto;
+  background-color: hsl(195, 17%, 95%);
+  &__container {
+      width: 80%;
+    margin: 0 auto;
+    display: flex;
+    padding: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    // padding: 5rem 0 4rem 0
+    @include for(tab-port) {
+     flex-direction: column;       
+    }
+  }
+  &__left {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    @include for(tab-port) {
+     flex-direction: column;       
+    }
+
+
+    img {
+      width: 4rem;
+      margin-right: 10rem;
+
+      @include for(tab-port) {
+        margin-bottom: 6rem;
+        margin-right: 0;
+      }
+      @include for(phone) {
+            margin-right: 0;
+            margin-bottom: 3rem;
+      }
+    }
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.3rem;
+
+    @include for(tab-port) {
+     grid-template-columns: 1fr 1fr;
+     width: 100%;
+       
+    }
+    @include for(phone) {
+     grid-template-columns: 1fr;       
+    }
+
+    div{
+      @include for(tab-port) {
+        width: 100%; 
+       }
+    }
+    
+
+    a {
+        text-align: justify;
+        font-weight: $fw-600;
+        margin-bottom: 0;
+        text-decoration: none;
+       
+        @include for(phone) {
+         text-align: center;   
+        }
+    }
+    a:hover {
+        color: $color-cyan;
+    }
+  }
+  &__right {
+    display: flex;
+    gap: 3rem;
+
+    a {
+      width: 2.5rem;
+      @include for(tab-port) {
+       margin-top: 5rem;     
+      }
+      @include for(phone) {
+       margin-top: 5rem;     
+      }
+
+        svg > path {
+      transition: all .3s ease-out;
+        }
+      svg > path:hover {
+        fill: $color-cyan;
+      }
+  }
+  }
+}

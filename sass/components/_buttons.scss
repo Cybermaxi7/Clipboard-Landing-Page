@@ -1,0 +1,40 @@
+.buttons {
+    @include displayFlex;
+    gap: 3rem;
+    margin-top: 3rem;
+    @include for(phone) {
+     flex-direction: column;       
+    }
+}
+
+.btn {
+    padding: 1.2rem 3.5rem;
+    border-radius: 5rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: $fw-600;
+    text-align: center;
+    
+
+    &__green {
+        background-color: $color-cyan;
+        box-shadow: 0 1rem 3rem rgba($color-cyan, .25);
+        transition: all .3s ease-out;
+
+        &:hover {
+            border-bottom: 3px solid hsl(173, 84%, 35%);
+        }
+    }
+
+    &__blue {
+        background-color: $color-lightBlue;
+        box-shadow: 0 1rem 3rem rgba($color-lightBlue, .25);
+        transition: all .3s ease-out;
+
+        &:hover {
+            border-bottom: 3px solid hsl(233, 77%, 54%);
+        }
+
+
+    }
+}

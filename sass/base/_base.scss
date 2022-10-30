@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  //this defines what 1rem is from the default browser size which is 16px(10/16*100)
+  font-size: 62.5%; //1rem = 10px;
+  @include for(tab-port) {
+
+      font-size: 57%;
+  }
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  /* font-size: 16px; */
+  font-size: $default-font-size;
+  font-weight: $fw-400;
+  line-height: 1.7;
+  background-image: url(../../images/bg-header-desktop.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100vw;
+
+  
+
+  @include for(phone) {
+    background-image: url(../../images/bg-header-mobile.png);
+    
+  }
+}
+
+

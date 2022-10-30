@@ -1,0 +1,215 @@
+section {
+  width: 100%;
+  height: 100vh;
+}
+.home-page {
+  @include displayFlex;
+  flex-direction: column;
+  .logo {
+    width: 12rem;
+    margin-bottom: 3rem;
+    animation: logo-animation 1.5s ease-out;
+    img {
+      width: 100%;
+    }
+  }
+  h1 {
+    animation: moveInLeft 1.5s ease-out;
+    line-height: 2;
+    @include for(phone) {
+      text-align: center;
+      font-size: 3.5rem;
+    }
+  }
+  p {
+    width: 65rem;
+    animation: moveInRight 1.5s ease-out;
+    @include for(phone) {
+      width: 100%;
+    }
+  }
+}
+
+.snippets {
+  &__headers {
+    @include displayFlex;
+    flex-direction: column;
+    font-size: 1.8rem;
+  }
+  p {
+    width: 66rem;
+    font-size: 1.6rem;
+    @include for(phone) {
+      width: 100%;
+    }
+  }
+
+  &__box {
+    @include displayFlex;
+    width: 100%;
+    margin-top: 6rem;
+    @include for(phone) {
+      flex-direction: column;
+    }
+
+    .left {
+      width: 50%;
+      @include for(phone) {
+        width: 100%;
+      }
+
+      img {
+        max-width: 80%;
+        background-size: contain;
+        @include for(tab-port) {
+          max-width: 70%;
+        }
+        @include for(phone) {
+            margin: 0 auto 3rem auto;
+            display: block;
+        }
+      }
+    }
+
+    .right {
+      width: 50%;
+
+      @include for(phone) {
+        width: 100%;
+      }
+      &__box-info {
+        width: 60%;
+
+        @include for(tab-port) {
+          width: 80%;
+        }
+        @include for(phone) {
+         width: 100%;   
+        }
+
+        p {
+          width: 100%;
+          text-align: justify;
+          font-size: 1.6rem;
+
+          @include for(tab-port) {
+            font-size: 1.3rem;
+            margin-left: 3rem;
+          }
+          @include for(phone) {
+            font-size: 1.6rem;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.accessibility {
+  margin-top: 3rem;
+  @include for(phone) {
+    padding-top: 6rem;
+  }
+  @include displayFlex;
+  flex-direction: column;
+  &__header {
+    @include displayFlex;
+    flex-direction: column;
+    padding-top: 3rem;
+    font-size: 1.8rem;
+   
+
+    P {
+      width: 55%;
+      @include for(phone) {
+     margin-top: 3rem;  
+     width: 100%;     
+    }
+    }
+  }
+  &__devices {
+    width: 70rem;
+    @include for(phone) {
+      width: 100%;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.tools {
+  height: 100%;
+  margin-bottom: 6rem;
+  &__heading {
+    @include displayFlex;
+    flex-direction: column;
+    gap: 1.7rem;
+    margin-bottom: 6rem;
+    font-size: 1.8rem;
+  }
+
+  &__row {
+    @include displayFlex;
+    gap: 2.5rem;
+    width: 80%;
+    margin: 0 auto;
+    @include for(phone) {
+     flex-direction: column; 
+     width: 100%;      
+    }
+    &-item {
+        @include displayFlex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 33%;
+        @include for(phone) {
+         width: 100%;   
+        }
+        
+      img {
+        width: 3.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  &__sponsorRow {
+    margin-top: 8rem;
+    margin-bottom: 6rem;
+    @include displayFlex;
+    gap: 8rem;
+    @include for(phone) {
+     flex-direction: column;       
+    }
+
+    &-item {
+      width: 14rem;
+      @include for(phone) {
+        width: 50%;       
+    }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .cta {
+    @include displayFlex;
+    flex-direction: column;
+    p {
+      width: 66rem;
+      margin-bottom: 0;
+      @include for(phone) {
+        width: 100%;       
+    }
+    }
+  }
+}
